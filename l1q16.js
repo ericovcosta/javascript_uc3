@@ -14,7 +14,9 @@ const prompt = Prompt()
 
 let area = parseFloat(prompt('Informe a área em m²: '))
 
-let quantidade_latas = parseInt((area / 55) + 1)
+let lata = 18 * 3 //m² que uma lata cobre
+
+let quantidade_latas = parseInt((area / (lata + 0.1)) + 1)
 let valor = (quantidade_latas * 80.00).toFixed(2)
 
 console.log(`A quantidade de tinta é: ${quantidade_latas} latas`)
