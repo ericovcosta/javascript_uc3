@@ -46,7 +46,7 @@
         if(resp === 'sim'){
             quantidade_sim++
         }
-    }while(resp !== 'sim' && resp !== 'não')
+    }while(exresp !== 'sim' && resp !== 'não')
 
     if(quantidade_sim == 0){
         console.log("inocente")
