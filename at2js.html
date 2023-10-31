@@ -1,0 +1,45 @@
+<!-- Exercício 2 – Faça um programa que “pegue” uma lista <ol> no HTML 
+    e coloque negrito dinâmicamente a partir de um nome digitado 
+    no seu input. Por exemplo
+    A sua tela possui uma lista de nomes:
+        João
+        Claudio
+        Marcio 
+    Usando um input você digita “Jo”, então o programa no mesmo 
+    momento deverá devolver João em negrito.
+    -->
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade 02 - Lista dinâmica</title>
+        <style>
+            .marca{
+                font-weight: bolder;
+            }
+        </style>
+    </head>
+    <body>
+        <ol>
+            <li>João</li>
+            <li>Vinícius</li>
+            <li>Angelo</li>
+            <li>Alessandra</li>
+            <li>Moises</li>
+            <li>Matheus</li>
+        </ol>
+    </body>
+    </html>
+    <script type="text/javascript">
+        const nome = prompt('Digite um nome para buscar')
+        const lista = document.getElementsByTagName('ol');
+        for(let item = 0;item < lista[0].children.length;item++){
+            item_list = lista[0].children[item].textContent;
+            item_list = item_list.toLowerCase();//tudo para minusculo
+            if(item_list.startsWith(nome.toLowerCase())){
+                let encontrado = lista[0].children[item].innerHTML.bold();
+                lista[0].children[item].innerHTML = encontrado;
+            }
+        }
+    </script>

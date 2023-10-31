@@ -1,0 +1,34 @@
+<!-- // Iniciante
+// Regras dos exercícios
+//     Utilize um arquivo HTML e uma tag script para resolver esse exercício.
+//     Faça do seu jeito, mas lembre-se não esqueça que o objetivo é manipular o DOM, sendo assim, 
+// faça seu melhor para fazer todas as 
+//     operações com a árvore (adição, remoção, busca, etc.)
+// Exercício 1 – Faça um programa que capture o evento de um input na sua tela e mostre
+//  automaticamente a tabuada desse número abaixo. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01 - Calculadora</title>
+</head>
+<body>
+    <h2>Tabuada de <span id="tabuada"></span></h2>
+    <p id="solucao">        
+    </p>
+    
+</body>
+</html>
+<script>
+    let numero = parseInt(prompt('Informe a tabuada que deseja criar'));
+    const tag_tabuada = document.getElementById('tabuada');
+    tag_tabuada.innerHTML=`<em>${numero}</em>`;
+    const solucao_tab = document.getElementById('solucao');
+    
+    for(let i=0;i<10;i++){
+        let resultado = document.createElement('p');
+        resultado.innerHTML=`${numero} x ${i+1} = ${numero*(i+1)}`;
+        solucao_tab.appendChild(resultado);
+    }
+</script>
