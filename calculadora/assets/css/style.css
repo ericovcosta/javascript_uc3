@@ -1,0 +1,35 @@
+.panel{
+    width: 250px;
+    height: 180px;
+    display: grid;
+    grid-template-rows: 30px 140px;
+    gap: 10px;
+}
+.keyboard{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    gap: 5px;
+    border-style: solid;
+    border-radius: 10px;
+    justify-content: center;
+}
+button{
+    border-style: solid;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+button:hover{
+    background-color: darkseagreen;
+}
+.display{
+    padding-left: 25px;
+    padding-right: 25px;
+    border-style: solid;
+    border-radius: 10px;
+    text-align: right;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
